@@ -8,12 +8,14 @@ body{
   height: 100%;
 }
 .wrapper{
-  width: 100vw;
- height: 1200px;
+  width: 1366px;
+height: 768px;
   background: radial-gradient(134.34% 134.43% at 50% 0%, #1f3757 0%, #131537 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .scoreboard{
   width: 700px;
@@ -25,6 +27,14 @@ body{
   justify-content: space-between;
   align-items: center;
 }
+.ruleme, .ruleclose{
+  display: none;
+  margin-top: 32px;
+}
+.closeme, .ruleclose{
+ 
+  margin-top: 32px;
+}
 .score{
   width: 150px;
   height: 114px;
@@ -35,9 +45,10 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 18px 24px;
 }
 .tittle{
-  margin-left: 30px;
+  margin: 18px 24px;
 }
 .score h1{
   color: #565468;
@@ -51,16 +62,16 @@ body{
 }
 .rules{
 display: flex;
-flex-direction: column;
+flex-direction: row;
+margin-top: -58px;
+
 
 }
 .showRuleImage{
   width: 400px;
   height: 461px;
-  margin-top: -580px;
+  margin-top: -500px;
   background: #FFFFFF;
-
-
 justify-content: center;
 position: relative;
 display: none;
@@ -79,28 +90,19 @@ position: absolute;
 
 margin-top: 10px;
 cursor: pointer;
+margin-left: 35%;
 
 }
 .ShowRules h1:hover{
 background-color: hsl(229,25%,31%);
 transform: translate3d(0px, -2px, 0px);
 }
+
 .close{
-font-weight: 600;
-font-size: 16px;
-line-height: 19px;
-text-align: center;
-letter-spacing: 2.5px;
-color: #FFFFFF;
-border-radius: 5px;
-border: 1px solid  #FFFFFF;
-padding: 12px 24px;
-align-self: flex-end;
-margin-right: 32px;
-margin-top: 40px;
-margin-left: 40px;
-cursor: pointer;
-justify-content: center;
+ position: absolute;
+ margin-top: 32px;
+ justify-self: flex-end;
+ margin-right: 32px;
 
 }
 .rules_image{
@@ -143,22 +145,22 @@ transform: translate3d(0px, -8px, 0px);
   
   
 }
+.try{
+  width: 312px;
+  height: 312px;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-top: 66.5px;
+  
+  }
 .hands .paper{
 position: relative;
 margin-right: 150px;
 }
-.try{
-width: 312px;
-height: 312px;
-background-image: url(./images/bg-triangle.svg);
-background-repeat: no-repeat;
-position: absolute;
-margin-top: 66.5px;
 
-}
 .paper_outer_shawdow {
-  width: 130px;
-  height: 133px;
+  width: 145px;
+  height: 148px;
   background: rgba(42,68,194,1);
   opacity: 1;
   top: 0px;
@@ -167,8 +169,8 @@ margin-top: 66.5px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1967056393623352);
 }
 .paper_box {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: rgba(69,100,244,1);
   opacity: 1;
   position: absolute;
@@ -177,8 +179,8 @@ margin-top: 66.5px;
   border-radius: 50%;
 }
 .paper_outer_gradient {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: linear-gradient(rgba(255,255,255,0.0966455414891243), rgba(255,255,255,0.00009999999747378752));
   opacity: 1;
   position: absolute;
@@ -187,21 +189,20 @@ margin-top: 66.5px;
   border-radius: 50%;
 }
 .paper_inner_gradient {
-  width: 100px;
-  height: 100px;
-  background: url("../images/v0_1381.png");
+  width: 112px;
+    height: 111px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
   top: 15px;
-  left: 15px;
-  overflow: hidden;
+  margin-left: 16.77px;
+  margin-right: 16.77px;
 }
 .paper_inner_shadow {
-  width: 100px;
-  height: 100px;
+  width: 112px;
+    height: 111px;
   background: rgba(186,190,211,1);
   opacity: 1;
   position: absolute;
@@ -210,27 +211,30 @@ margin-top: 66.5px;
   border-radius: 50%;
 }
 .paper_inner_white {
-  width: 100px;
-  height: 95px;
-  background: linear-gradient(rgba(243,243,243,1), rgba(217,217,217,1));
-  opacity: 1;
-  position: absolute;
-  top: 5px;
-  left: 0px;
-  border-radius: 50%;
+  width: 111.31px;
+    height: 110.82px;
+    background: linear-gradient(rgba(243,243,243,1), rgba(217,217,217,1));
+    opacity: 1;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border-radius: 50%;
 }
 .paper_img {
-  width: 49px;
-  height: 57px;
-  background: url("../images/v0_1384.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 24px;
-  left: 25px;
-  overflow: hidden;
+  width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    margin-top: 22.5px;
+    margin-right: 20.81px;
+    margin-left: 20.81px;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
 }
 .paper_img1 {
   width: 43px;
@@ -249,8 +253,8 @@ margin-top: 66.5px;
 position: relative;
 }
 .scissors_outer_shawdow {
-  width: 129px;
-  height: 132px;
+  width: 145px;
+  height: 148px;
   background: rgba(199,107,26,1);
   opacity: 1;
   
@@ -261,8 +265,8 @@ position: relative;
   box-shadow: 0px 3px 3px rgb(0 0 0 / 20%);
 }
 .scissors_box {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: rgba(235,159,13,1);
   opacity: 1;
   position: absolute;
@@ -271,8 +275,8 @@ position: relative;
   border-radius: 50%;
 }
 .scissors_outer_gradient {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: linear-gradient(rgba(255,255,255,0.0966455414891243), rgba(255,255,255,0.00009999999747378752));
   opacity: 1;
   top: 0px;
@@ -281,21 +285,21 @@ position: relative;
   position: absolute;
 }
 .scissors_inner_gradient {
-  width: 100px;
-  height: 100px;
-  background: url("../images/v0_1381.png");
+  width: 112px;
+    height: 111px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
   top: 15px;
-  left: 15px;
-  overflow: hidden;
+  margin-left: 16.77px;
+  margin-right: 16.77px;
+  
 }
 .scissors_inner_shadow {
-  width: 100px;
-  height: 100px;
+  width: 112px;
+  height: 111px;
   background: rgba(186,190,211,1);
   opacity: 1;
   position: absolute;
@@ -304,8 +308,8 @@ position: relative;
   border-radius: 50%;
 }
 .scissors_inner_white {
-  width: 100px;
-  height: 95px;
+  width: 111.31px;
+  height: 110.82px;
   background: linear-gradient(rgba(243,243,243,1), rgba(217,217,217,1));
   opacity: 1;
   position: absolute;
@@ -316,15 +320,14 @@ position: relative;
 .scissors_img {
   width: 49px;
   height: 57px;
-  background: url("../images/v0_1384.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 24px;
-  left: 25px;
-  overflow: hidden;
+  margin-right: 30.81px;
+  margin-left: 30.81px;
+  margin-top: 30.81px;
 }
 .scissors_img1 {
   width: 43px;
@@ -344,8 +347,8 @@ position: relative;
 margin-top: 134.5px;
 }
 .rock_outer_shawdow {
-  width: 130px;
-  height: 133px;
+  width: 145px;
+  height: 148px;
   background: rgba(156,21,52,1);
   opacity: 1;
   
@@ -355,8 +358,8 @@ margin-top: 134.5px;
   box-shadow: 0px 3px 3px rgb(0 0 0 / 20%);
 }
 .rock_box {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: rgba(219,45,77,1);
   opacity: 1;
   position: absolute;
@@ -365,8 +368,8 @@ margin-top: 134.5px;
   border-radius: 50%;
 }
 .rock_outer_gradient {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: linear-gradient(rgba(255,255,255,0.0966455414891243), rgba(255,255,255,0.00009999999747378752));
   opacity: 1;
   position: absolute;
@@ -375,21 +378,20 @@ margin-top: 134.5px;
   border-radius: 50%;
 }
 .rock_inner_gradient {
-  width: 100px;
-  height: 100px;
-  background: url("../images/v0_1381.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  overflow: hidden;
+  width: 112px;
+    height: 111px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 15px;
+    margin-left: 16.77px;
+  margin-right: 16.77px;
 }
 .rock_inner_shadow {
-  width: 100px;
-  height: 100px;
+  width: 112px;
+  height: 111px;
   background: rgba(186,190,211,1);
   opacity: 1;
   position: absolute;
@@ -399,27 +401,30 @@ margin-top: 134.5px;
 
 }
 .rock_inner_white {
-  width: 100px;
-  height: 95px;
-  background: linear-gradient(rgba(243,243,243,1), rgba(217,217,217,1));
-  opacity: 1;
-  position: absolute;
-  top: 5px;
-  left: 0px;
-  border-radius: 50%;
+  width: 111.31px;
+    height: 110.82px;
+    background: linear-gradient(rgba(243,243,243,1), rgba(217,217,217,1));
+    opacity: 1;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border-radius: 50%;
 }
 .rock_img {
   width: 49px;
   height: 57px;
-  background: url("../images/v0_1384.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 24px;
-  left: 25px;
-  overflow: hidden;
+  margin-right: 30.81px;
+    margin-left: 30.81px;
+    margin-top: 30.81px;
+    overflow: hidden;
+
+
+  
 }
 .rock_img1 {
   width: 43px;
@@ -435,8 +440,10 @@ margin-top: 134.5px;
 
 .contest{
   width: 900px;
+  height: 395px;
   display: none;
   margin-top: 50px;
+  grid-template-columns: 293px 220px 293px;
   
 }
 .contest .handImageContainer {
@@ -475,6 +482,653 @@ align-self: center;
 justify-self : center;
   
 }
+.userchoice .stage1{
+
+  
+  position: relative;
+align-self: center;
+ 
+justify-self : center;
+  
+}
+
+/*==============ENLARGEMENT OF BOXES USER CHOISE===========================*/
+.stage1 .paper_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage1 .paper_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage1 .paper_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage1 .paper_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage1 .paper_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage1 .paper_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage1 .paper_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage1 .paper_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(-3deg);
+}
+/*Paper ends*/
+/*scissors starts*/
+.stage2 .scissors_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage2 .scissors_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage2 .scissors_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage2 .scissors_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage2 .scissors_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage2 .scissors_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage2 .scissors_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage2 .scissors_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(-3deg);
+}
+/*Scissors ends*/
+/*scissors ends*/
+.stage3 .rock_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage3 .rock_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage3 .rock_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage3 .rock_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage3 .rock_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage3 .rock_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage3 .rock_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage3 .rock_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(45deg);
+}
+/*Rock ends*/
+/*Spock starts*/
+.stage9 .spock_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage9 .spock_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage9 .spock_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage9 .spock_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage9 .spock_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage9 .spock_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage9 .spock_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage9 .spock_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(45deg);
+}
+/*Spock ends*/
+/*Lizard starts*/
+.stage10 .lizard_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage10 .lizard_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage10 .lizard_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage10 .lizard_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage10 .lizard_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage10 .lizard_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage10 .lizard_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage10 .lizard_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(45deg);
+}
+/*Lizard ends*/
+
+
+/*==========END OF ENLARGEMENT OF USER CHOICE===========================*/
+/*==============ENLARGEMENT OF BOXES COMPUTER CHOICE===========================*/
+.stage4 .paper_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage4 .paper_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage4 .paper_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage4 .paper_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage4 .paper_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage4 .paper_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage4 .paper_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage4 .paper_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(-3deg);
+}
+/*Paper ends*/
+/*scissors starts*/
+.stage5 .scissors_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage5 .scissors_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage5 .scissors_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage5 .scissors_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage5 .scissors_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage5 .scissors_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage5 .scissors_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage5 .scissors_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(-3deg);
+}
+/*Scissors ends*/
+/*scissors ends*/
+.stage6 .rock_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage6 .rock_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage6 .rock_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage6 .rock_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage6 .rock_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage6 .rock_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage6 .rock_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage6 .rock_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(45deg);
+}
+/*Rock ends*/
+/*Spock starts*/
+.stage7 .spock_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage7 .spock_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage7 .spock_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage7 .spock_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage7 .spock_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage7 .spock_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage7 .spock_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage7 .spock_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(45deg);
+}
+/*Spock ends*/
+/*Lizard starts*/
+.stage8 .lizard_outer_shawdow {
+  width: 293px;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.stage8 .lizard_box {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage8 .lizard_outer_gradient {
+  width: 293px;
+  height: 286.7px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage8 .lizard_inner_gradient {
+  width: 225px;
+    height: 225px;
+  top: 15px;
+ margin-left: 12%;
+ margin-top: 3.5%;
+}
+.stage8 .lizard_inner_shadow {
+  width: 225px;
+    height: 225px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.stage8 .lizard_inner_white {
+  width: 225px;
+    height: 225px;
+    top: 15px;
+    left: 0px;
+    display: grid;
+    border-radius: 50%;
+    justify-content: center;
+}
+.stage8 .lizard_img {
+  width: 120px;
+  height: 118.23px;
+    top: 0;
+    margin-top: 68.5px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+    justify-content: center;
+    display: flex;
+}
+.stage8 .lizard_img1 {
+  width: 80px;
+  height: 118.23px;
+  left: 0px;
+    margin-right: 52.5px;
+    margin-left: 52.5px;
+  transform: rotate(45deg);
+}
+/*Lizard ends*/
+
+
+/*==========END OF ENLARGEMENT OF USER CHOISE===========================*/
+
 .referee{
   
 
@@ -539,15 +1193,16 @@ display: none;
 .bonus .bg_pentagon{
   width: 345px;
   height: 345px;
-  background-image: url(./images/bg-pentagon.svg);
   background-repeat: no-repeat;
   position: absolute;
   margin-top: 66.5px;
 }
 .bonus{
-  width: 470px;
-height: 430px;
+  width: 472px;
+height: 463px;
   margin-top: 48px;
+  margin-left: 447px;
+    margin-right: 447px;
 
   
   background-repeat: no-repeat;
@@ -603,8 +1258,8 @@ margin-top: 300px;
 margin-left: -225px;
 }
 .lizard_outer_shawdow {
-  width: 130px;
-  height: 133px;
+  width: 145px;
+  height: 148px;
   background: rgba(94,54,167,1);
   opacity: 1;
   
@@ -614,8 +1269,8 @@ margin-left: -225px;
   box-shadow: 0px 3px 3px rgb(0 0 0 / 20%);
 }
 .lizard_box {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: rgba(130,78,226,1);
   opacity: 1;
   position: absolute;
@@ -624,8 +1279,8 @@ margin-left: -225px;
   border-radius: 50%;
 }
 .lizard_outer_gradient {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: linear-gradient(rgba(255,255,255,0.0966455414891243), rgba(255,255,255,0.00009999999747378752));
   opacity: 1;
   position: absolute;
@@ -634,21 +1289,21 @@ margin-left: -225px;
   border-radius: 50%;
 }
 .lizard_inner_gradient {
-  width: 100px;
-  height: 100px;
-  background: url("../images/v0_1381.png");
+  width: 112px;
+  height: 111px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
   top: 15px;
-  left: 15px;
-  overflow: hidden;
+  margin-left: 16.77px;
+  margin-right: 16.77px;
+  
 }
 .lizard_inner_shadow {
-  width: 100px;
-  height: 100px;
+  width: 112px;
+  height: 111px;
   background: rgba(186,190,211,1);
   opacity: 1;
   position: absolute;
@@ -658,31 +1313,34 @@ margin-left: -225px;
 
 }
 .lizard_inner_white {
-  width: 100px;
-  height: 95px;
+  width: 111.31px;
+  height: 110.82px;
   background: linear-gradient(rgba(243,243,243,1), rgba(217,217,217,1));
   opacity: 1;
   position: absolute;
   top: 5px;
-  left: 0px;
+  left: 0;
+  right: 0;
   border-radius: 50%;
 }
 .lizard_img {
-  width: 63px;
-  height: 60px;
-  background: url("../images/v0_1384.png");
+  width: 70px;
+  height: 70px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 24px;
-  left: 25px;
+  left: 0px;
+  right: 0px;
+  margin-top: 25.5px;
+  margin-right: 20.81px;
+  margin-left: 20.81px;
   overflow: hidden;
 }
 .lizard_img1 {
-  width: 63px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: rgba(58,66,97,1);
   opacity: 1;
   position: absolute;
@@ -696,13 +1354,13 @@ margin-left: -225px;
 .bonus .spock{
   position: absolute;
   margin-top: 119px;
-  margin-left: -350px;
+  margin-left: -320px;
  
  
 }
 .spock_outer_shawdow {
-  width: 130px;
-  height: 133px;
+  width: 145px;
+  height: 148px;
   background: rgba(45,140,171,1);
   opacity: 1;
 
@@ -712,8 +1370,8 @@ margin-left: -225px;
   box-shadow: 0px 3px 3px rgb(0 0 0 / 20%);
 }
 .spock_box {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: rgba(63,183,204,1);
   opacity: 1;
   position: absolute;
@@ -723,8 +1381,8 @@ margin-left: -225px;
   border-radius: 50%;
 }
 .spock_outer_gradient {
-  width: 130px;
-  height: 127px;
+  width: 145px;
+  height: 141.44px;
   background: linear-gradient(rgba(255,255,255,0.0966455414891243), rgba(255,255,255,0.00009999999747378752));
   opacity: 1;
   position: absolute;
@@ -733,21 +1391,20 @@ margin-left: -225px;
   border-radius: 50%;
 }
 .spock_inner_gradient {
-  width: 100px;
-  height: 100px;
-  background: url("../images/v0_1381.png");
+  width: 112px;
+  height: 111px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
   top: 15px;
-  left: 15px;
-  overflow: hidden;
+  margin-left: 16.77px;
+  margin-right: 16.77px;
 }
 .spock_inner_shadow {
-  width: 100px;
-  height: 100px;
+  width: 112px;
+  height: 111px;
   background: rgba(186,190,211,1);
   opacity: 1;
   position: absolute;
@@ -757,8 +1414,8 @@ margin-left: -225px;
 
 }
 .spock_inner_white {
-  width: 100px;
-  height: 95px;
+  width: 111.31px;
+  height: 110.82px;
   background: linear-gradient(rgba(243,243,243,1), rgba(217,217,217,1));
   opacity: 1;
   position: absolute;
@@ -767,26 +1424,1355 @@ margin-left: -225px;
   border-radius: 50%;
 }
 .spock_img {
-  width: 63px;
-  height: 60px;
-  background: url("../images/v0_1384.png");
+  width: 70px;
+    height: 70px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 24px;
-  left: 25px;
+  top: 0;
+  
+  margin-top: 22.5px;
+    margin-right: 20.81px;
+    margin-left: 20.81px;
+    justify-content: center;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 .spock_img1 {
-  width: 63px;
-  height: 60px;
+  width: 70px;
+    height: 70px;
   background: rgba(58,66,97,1);
   opacity: 1;
   position: absolute;
   top: 3px;
   left: 0px;
   transform: rotate(-3deg);
+  
 }
 /*rock ends*/
+/*Media query for laptops*/
+ /*for laptops*/
+      
+ @media all and (min-width: 1025px) and (max-width: 1365px){
+
+  .bonus{
+    margin-top: 10px;
+  }
+  .hands {
+   
+    margin-top: 20px;
+    
+}
+  .ShowRules{
+    
+    margin-top: -20px;
+    cursor: pointer;
+    margin-left: 428px;
+}
+.scoreboard {
+  
+  margin-top: 20px;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bonus .scissors{
+  margin-top: 8px;
+}
+.bonus .bg_pentagon {
+  width: 335px;
+  height: 335px;
+ 
+}
+.bonus .rock {
+  margin-top: 295px;
+  margin-right: -50px
+}
+.bonus .lizard {
+  margin-left: -200px;
+  margin-top: 295px;
+}
+.bonus .spock {
+  margin-left: -300px;
+  
+}
+.showRuleImage {
+  height: 400px;
+  margin-top: -113%;
+}
+.paper_outer_shawdow {
+  width: 135px;
+  height: 138px;
+}
+.paper_box {
+  width: 135px;
+  height: 131.44px;
+}
+.paper_outer_gradient {
+  width: 135px;
+  height: 131.44px;
+}
+.paper_inner_gradient {
+  width: 102px;
+    height: 101px;
+  top: 15px;
+  
+}
+.paper_inner_shadow {
+  width: 102px;
+    height: 101px;
+}
+.paper_inner_white {
+  width: 101.31px;
+    height: 100.82px;
+    top: 5px;
+}
+.paper_img {
+  width: 70px;
+    height: 70px;
+    margin-left: 16%;
+    margin-top: 17%;
+}
+.paper_img1 {
+  width: 43px;
+  height: 52px;
+  top: 3px;
+  left: 0px;
+}
+/*Paper ends*/
+/*scissors begins*/
+
+
+.scissors_outer_shawdow {
+  width: 135px;
+  height: 138px;
+}
+.scissors_box {
+  width: 135px;
+  height: 131.44px;
+}
+.scissors_outer_gradient {
+  width: 135px;
+  height: 131.44px;
+}
+.scissors_inner_gradient {
+  width: 102px;
+    height: 101px;
+  top: 15px;
+ 
+  
+}
+.scissors_inner_shadow {
+  width: 102px;
+  height: 101px;
+}
+.scissors_inner_white {
+  width: 101.31px;
+  height: 100.82px;
+ 
+  top: 5px;
+  
+ 
+}
+.scissors_img {
+  width: 49px;
+  height: 57px;
+  margin-left: 25%;
+  margin-top: 25%;
+}
+.scissors_img1 {
+  width: 43px;
+  height: 52px;
+  top: 3px;
+  
+}
+/*Scissors ends*/
+/*rock begins*/
+
+.rock_outer_shawdow {
+  width: 135px;
+  height: 138px;
+  
+}
+.rock_box {
+  width: 135px;
+  height: 131.44px;
+ 
+}
+.rock_outer_gradient {
+  width: 135px;
+  height: 131.44px;
+ 
+}
+.rock_inner_gradient {
+  width: 102px;
+    height: 101px;
+    left: 0;
+    right: 0;
+    top: 15px;
+   
+}
+.rock_inner_shadow {
+  width: 102px;
+  height: 101px;
+ 
+
+}
+.rock_inner_white {
+  width: 101.31px;
+    height: 100.82px;
+    
+    top: 5px;
+    left: 0px;
+    
+}
+.rock_img {
+  width: 49px;
+  height: 57px;
+  
+  margin-left: 25%;
+   
+
+
+  
+}
+.rock_img1 {
+  width: 43px;
+  height: 52px;
+  
+  top: 3px;
+  
+}
+/*rock ends*/
+.spock_outer_shawdow {
+  width: 135px;
+  height: 138px;
+  
+}
+.spock_box {
+  width: 135px;
+  height: 131.44px;
+ 
+}
+.spock_outer_gradient {
+  width: 135px;
+  height: 131.44px;
+ 
+}
+.spock_inner_gradient {
+  width: 102px;
+    height: 101px;
+    left: 0;
+    right: 0;
+    top: 15px;
+   
+}
+.spock_inner_shadow {
+  width: 102px;
+  height: 101px;
+ 
+
+}
+.spock_inner_white {
+  width: 101.31px;
+    height: 100.82px;
+    
+    top: 5px;
+    left: 0px;
+    
+}
+.spock_img {
+  width: 49px;
+  height: 57px;
+  
+  margin-left: 28%;
+   
+
+
+  
+}
+.spock_img1 {
+  width: 43px;
+  height: 52px;
+  
+  top: 3px;
+  
+}
+/*rock ends*/
+.lizard_outer_shawdow {
+  width: 135px;
+  height: 138px;
+  
+}
+.lizard_box {
+  width: 135px;
+  height: 131.44px;
+ 
+}
+.lizard_outer_gradient {
+  width: 135px;
+  height: 131.44px;
+ 
+}
+.lizard_inner_gradient {
+  width: 102px;
+    height: 101px;
+    left: 0;
+    right: 0;
+    top: 15px;
+   
+}
+.lizard_inner_shadow {
+  width: 102px;
+  height: 101px;
+ 
+
+}
+.lizard_inner_white {
+  width: 101.31px;
+    height: 100.82px;
+    
+    top: 5px;
+    left: 0px;
+    
+}
+.lizard_img {
+  width: 70px;
+  height: 57px;
+  
+  margin-left: 18%;
+   
+
+
+  
+}
+.lizard_img1 {
+  width: 43px;
+  height: 52px;
+  
+  top: 3px;
+  
+}
+
+}
+/*Media Query for tablets*/
+@media screen and (min-width: 768px) and (max-width: 1024px){
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+}
+  .scoreboard{
+    width: 411px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin-top: 50px;
+    height: 166px;
+    display: flex;
+   
+}
+
+.tittle{
+  width: 150px;
+    height: 114px;
+    margin-left: 30px;
+}
+.tittle_img{
+  width: 150px;
+    height: 114px;
+}
+.try{
+  width: 300px;
+    height: 300px;
+}
+.triangle{
+  width: 300px;
+    height: 300px;
+}
+.hands{
+  width: 413px;
+  height: 382px;
+   
+}
+.hands .rock {
+  margin-top: 154.5px;
+}
+.ShowRules {
+ 
+ left: 0;
+  
+ margin-left: 39.2%;
+ margin-top: 0%;
+  cursor: pointer;
+  top: 950px;
+  position: absolute;
+}
+
+.rules{
+  display: flex;
+  margin-top: -70%;
+  margin-left: auto;
+    margin-right: auto;
+
+}
+.showRuleImage{
+  display: flex;
+  justify-self: center;
+  display: none;
+  width: 100vw;
+    height: 100vh;
+    margin-top: 60px; /*-120*/
+    border-radius: 2%;
+    
+}
+.showRuleImage h1{
+  width: 85px;
+  height: 32px;
+  justify-self: center;
+    align-self: center;
+    margin-top: 5px;
+    /*margin-bottom: 96px;*/
+}
+
+.rules_image{
+  
+  width: 450px;
+    height: 450px;
+    margin-top: -192px;
+    
+ 
+    
+}
+.close{
+  
+  width: 45.09px;
+    height: 45.09px;
+    display: flex;
+    margin-top: 0;
+    align-self: center;
+    margin-left: 44%;
+    position: relative;
+    justify-self: center;
+    margin: 0;
+    
+}
+.close_img{
+  width: 45.09px;
+    height: 45.09px;
+    margin: 0;
+    display: flex;
+    
+}
+.contest {
+  height: 196px;
+    width: 425px;
+    display: none;
+    margin-top: 99px;
+    grid-template-columns: repeat(2,1fr);
+}
+.referee {
+ position: absolute;
+    margin-top: 400px;
+    justify-self: center;
+}
+.userhand, .computerhand {
+ margin-bottom: 0;
+  flex-direction: column-reverse;
+}
+
+.decision{
+  margin-top: -67px;
+  
+  
+}
+.referee .decision h1{
+ 
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 67px;
+  margin-bottom: 10px;
+}
+
+/*Paper begins*/
+.paper{
+   
+    background-position: center;
+   
+    
+    
+}
+.hands .paper{
+  position: relative;
+  margin-right: 150px;
+}
+
+.paper_outer_shawdow {
+    width: 130px;
+    height: 133px;
+    top: 0px;
+    left: 0px;
+  }
+  .paper_box {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+  }
+  .paper_outer_gradient {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+  }
+  .paper_inner_gradient {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 15px;
+    margin: 0;
+  }
+  .paper_inner_shadow {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+  }
+  .paper_inner_white {
+    width: 100px;
+    height: 95px;
+    top: 5px;
+    left: 0px;
+  }
+  .paper_img {
+    width: 49px;
+    height: 57px;
+    top: 24px;
+    left: 0;
+    margin-top: 0;
+
+  }
+  .paper_img1 {
+    width: 43px;
+    height: 52px;
+    top: 3px;
+    left: 0px;
+    
+
+  }
+  /*Paper ends*/
+/*scissors begins*/
+
+.hands .scissors{
+  position: relative;
+}
+.scissors_outer_shawdow {
+    width: 129px;
+    height: 132px; 
+    top: 0px;
+    left: 0px;
+  }
+  .scissors_box {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+  }
+  .scissors_outer_gradient {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+    
+  }
+  .scissors_inner_gradient {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 15px;
+    margin: 0;
+  }
+  .scissors_inner_shadow {
+    width: 100px;
+    height: 100px;
+  }
+  .scissors_inner_white {
+    width: 100px;
+    height: 95px;
+    top: 5px;
+    left: 0px;
+  }
+  .scissors_img {
+    width: 49px;
+    height: 57px;
+    top: 24px;
+    left: 25px;
+    margin: 0;
+  }
+  .scissors_img1 {
+    width: 43px;
+    height: 52px;
+    top: 3px;
+    left: 0px;
+  }
+  /*Scissors ends*/
+/*rock begins*/
+
+.hands .rock{
+  position: relative;
+  margin-top: 134.5px;
+}
+.rock_outer_shawdow {
+    width: 130px;
+    height: 133px;
+   
+    
+    top: 0px;
+    left: 0px;
+    
+  }
+  .rock_box {
+    width: 130px;
+    height: 127px;
+    
+    top: 0px;
+    left: 0px;
+    
+  }
+  .rock_outer_gradient {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+    }
+  .rock_inner_gradient {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 15px;
+    margin: 0;
+  }
+  .rock_inner_shadow {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+
+  }
+  .rock_inner_white {
+    width: 100px;
+    height: 95px;
+    top: 5px;
+    left: 0px;
+  }
+  .rock_img {
+    width: 49px;
+    height: 57px;
+    top: 24px;
+    left: 25px;
+    margin: 0;
+  }
+  .rock_img1 {
+    width: 43px;
+    height: 52px;
+    top: 3px;
+    left: 0px;
+  }
+  /*rock ends*/
+
+  
+ .contest .handImageContainer {
+    
+   
+    position: absolute;
+   background-position: center center;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 25%;
+   
+  }
+  .stage2 .scissors_inner_gradient {
+    width: 225px;
+    height: 225px;
+    
+    margin-left: 12%;
+    margin-top: 3.5%;
+}
+  .bonus .bg_pentagon{
+    width: 345px;
+    height: 345px;
+    position: absolute;
+    margin-top: 66.5px;
+  }
+  .bonus{
+    width: 470px;
+  height: 430px;
+    margin-top: 150px;
+    display: flex;
+      flex-wrap: wrap;
+      
+      justify-content: center;
+      position: relative;
+ 
+
+  }
+  /*Paper begins*/
+  
+.bonus .paper{
+position: absolute;
+margin-left: 160px;
+margin-top: 119px;
+}
+.bonus .rock{
+  position: absolute;
+  margin-top: 307px;
+  margin-right: -50px;
+  }
+.bonus .scissors{
+  margin-right: 0;
+  margin-left: -138px;
+  position: absolute;
+  }
+
+
+/*lizard*/
+.bonus .lizard{
+  position: absolute;
+  margin-top: 300px;
+  margin-left: -225px;
+}
+.lizard_outer_shawdow {
+    width: 130px;
+    height: 133px;
+    top: 0px;
+    left: 0px;
+  }
+  .lizard_box {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+  }
+  .lizard_outer_gradient {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+  }
+  .lizard_inner_gradient {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 15px;
+    margin: 0;
+  }
+  .lizard_inner_shadow {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+
+  }
+  .lizard_inner_white {
+    width: 100px;
+    height: 95px;
+    top: 5px;
+    left: 0px;
+  }
+  .lizard_img {
+    width: 63px;
+    height: 60px;
+    top: 24px;
+    left: 20px;
+    margin: 0;
+    
+  }
+  .lizard_img1 {
+    width: 63px;
+    height: 60px;
+    top: 3px;
+    left: 0px;
+  }
+  /*lizard ends*/
+
+ /*spock begins*/
+  .bonus .spock{
+    position: absolute;
+    margin-top: 119px;
+    margin-left: -325px;
+  }
+.spock_outer_shawdow {
+    width: 130px;
+    height: 133px;
+    top: 0px;
+    left: 0px;
+  }
+  .spock_box {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+  }
+  .spock_outer_gradient {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+  }
+  .spock_inner_gradient {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 15px;
+    margin: 0;
+  }
+  .spock_inner_shadow {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+  }
+  .spock_inner_white {
+    width: 100px;
+    height: 95px;
+    top: 5px;
+    left: 0px;
+  }
+  .spock_img {
+    width: 63px;
+    height: 60px;
+    opacity: 1;
+    top: 24px;
+    left: 25px;
+    margin: 0;
+  }
+  .spock_img1 {
+    width: 63px;
+    height: 60px;
+    top: 3px;
+    left: 0px;
+   
+  }
+  /*rock ends*/
+
+  .stage1 .paper_outer_shawdow, .stage4 .paper_outer_shawdow, 
+  .stage2 .scissors_outer_shawdow, .stage5 .scissors_outer_shawdow,
+  .stage3 .rock_outer_shawdow, .stage6 .rock_outer_shawdow, 
+  .stage9 .spock_outer_shawdow, .stage7 .spock_outer_shawdow,
+  .stage8 .lizard_outer_shawdow,  .stage10 .lizard_outer_shawdow{
+    width: 180px;
+    height: 188px;
+    top: 0px;
+    left: 0px;
+  }
+  .stage1 .paper_box, .stage4 .paper_box, 
+  .stage2 .scissors_box, .stage5 .scissors_box,
+  .stage3 .rock_box, .stage6 .rock_box, 
+  .stage9 .spock_box, .stage7 .spock_box,
+  .stage8 .lizard_box, .stage10 .lizard_box {
+    width: 180px;
+    height: 177px;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+  }
+  .stage1 .paper_outer_gradient, .stage4 .paper_outer_gradient, 
+  .stage2 .scissors_outer_gradient, .stage5 .scissors_outer_gradient,
+  .stage3 .rock_outer_gradient, .stage6 .rock_outer_gradient,
+  .stage9 .spock_outer_gradient, .stage7 .spock_outer_gradient,
+  .stage8 .lizard_outer_gradient, .stage10 .lizard_outer_gradient {
+    width: 180px;
+    height: 177px;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+  }
+  .stage1 .paper_inner_gradient, .stage4 .paper_inner_gradient, 
+  .stage2 .scissors_inner_gradient, .stage5 .scissors_inner_gradient,
+  .stage3 .rock_inner_gradient, .stage6 .rock_inner_gradient,
+  .stage9 .spock_inner_gradient, .stage7 .spock_inner_gradient,
+  .stage8 .lizard_inner_gradient, .stage10 .lizard_inner_gradient{
+    width: 135px;
+      height: 135px;
+      top: 0px;
+      left: 0px;
+      margin: 13%;
+  }
+  .stage1 .paper_inner_shadow, .stage4 .paper_inner_shadow, 
+  .stage2 .scissors_inner_shadow, .stage5 .scissors_inner_shadow,
+  .stage3 .rock_inner_shadow, .stage6 .rock_inner_shadow,
+  .stage9 .spock_inner_shadow, .stage7 .spock_inner_shadow,
+  .stage8 .lizard_inner_shadow, .stage10 .lizard_inner_shadow{
+    width: 135px;
+    height: 135px;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+  }
+  .stage1 .paper_inner_white, .stage4 .paper_inner_white, 
+  .stage2 .scissors_inner_white, .stage5 .scissors_inner_white,
+  .stage3 .rock_inner_white, .stage6 .rock_inner_white,
+  .stage9 .spock_inner_white, .stage7 .spock_inner_white,
+  .stage8 .lizard_inner_white, .stage10 .lizard_inner_white {
+    width: 135px;
+    height: 130px;
+      top: 8px;
+      left: 0px;
+      margin: 0;
+      display: grid;
+      border-radius: 50%;
+      justify-content: center;
+  }
+  .stage1 .paper_img, .stage4 .paper_img, 
+  .stage2 .scissors_img, .stage5 .scissors_img,
+  .stage3 .rock_img, .stage6 .rock_img,
+  .stage9 .spock_img, .stage7 .spock_img,
+  .stage8 .lizard_img, .stage10 .lizard_img {
+    width: 79px;
+    height: 77px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 21%;
+
+  }
+  .stage1 .paper_img1, .stage4 .paper_img1, 
+  .stage2 .scissors_img1, .stage5 .scissors_img1,
+  .stage3 .rock_img1, .stage6 .rock_img1,
+  .stage9 .spock_img1, .stage7 .spock_img1,
+  .stage8 .lizard_img1, .stage10 .lizard_img1 {
+    width: 63px;
+    height: 52px;
+    top: 3px;
+    left: 0px;
+    margin: 0;
+  }
+  /*Paper ends*/
+  /*scissors starts*/
+  
+ 
+
+
+}
+/*Media Query for phones*/
+@media screen and (max-width: 766px){
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+}
+  .scoreboard{
+    width: 311px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin-top: 32px;
+    height: 96px;
+    display: flex;
+   
+}
+.score{
+  width: 80px;
+height: 72px
+}
+.score p{
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px
+}
+.score h1{
+  font-weight: 700;
+font-size: 40px;
+line-height: 40px;
+}
+.tittle{
+  width: 49px;
+    height: 48px;
+    margin-left: 30px;
+}
+.tittle_img{
+  width: 49px;
+    height: 48px;
+}
+.try{
+  width: 166px;
+    height: 188px;
+}
+.triangle{
+  width: 166px;
+    height: 188px;
+}
+.hands{
+  width: 312px;
+  height: 282px;
+   
+}
+.hands .rock {
+  margin-top: 154.5px;
+  position: absolute;
+}
+.hands .paper{
+  margin-top: 20px;
+  margin-right: 150px;
+}
+.hands .scissors{
+  position: absolute;
+  margin-left: 140px;
+  margin-top: 20px;
+}
+.ShowRules {
+ 
+ left: 0;
+  
+ margin-left: 27%;
+ margin-top: 0;
+  top: 604px;
+  cursor: pointer;
+  position: absolute;
+  
+}
+
+
+.rules{
+  display: flex;
+  margin-top: -70%;
+  margin-left: auto;
+    margin-right: auto;
+
+}
+.showRuleImage{
+  display: flex;
+  justify-self: center;
+  display: none;
+  width: 100vw;
+    height: 100vh;
+    margin-top: -110px;
+    border-radius: 2%;
+    
+}
+.showRuleImage h1{
+  width: 85px;
+  height: 32px;
+  justify-self: center;
+    align-self: center;
+    margin-top: 5px;
+    margin-left: -7%;
+    /*margin-bottom: 96px;*/
+}
+
+.rules_image{
+  
+  width: 311px;
+    height: 305px;
+    margin-top: 2px;
+    
+ 
+    
+}
+.close{
+  
+  width: 45.09px;
+    height: 45.09px;
+    display: flex;
+    margin-top: 0;
+    align-self: center;
+    margin-left: 44%;
+    position: relative;
+    justify-self: center;
+    margin: 0;
+    
+}
+.close_img{
+  width: 45.09px;
+    height: 45.09px;
+    margin: 0;
+    display: flex;
+    
+}
+.contest {
+  height: 196px;
+    width: 425px;
+    display: none;
+    margin-top: 60px;
+    grid-template-columns: repeat(2,1fr);
+}
+.referee {
+ position: absolute;
+    margin-top: 290px;
+    justify-self: center;
+}
+.userhand, .computerhand {
+ margin-bottom: 0;
+  flex-direction: column-reverse;
+}
+
+.decision{
+  margin-top: -67px;
+  
+  
+}
+.referee .decision h1{
+ 
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 67px;
+  margin-bottom: 10px;
+}
+
+/*Paper begins*/
+.paper{
+   
+    background-position: center;
+   
+    
+    
+}
+
+
+.paper_outer_shawdow, .scissors_outer_shawdow, .rock_outer_shawdow, .spock_outer_shawdow, .lizard_outer_shawdow{
+    width: 96px;
+    height: 97px;
+    top: 0px;
+    left: 0px;
+  }
+  .paper_box, .scissors_box, .rock_box, .spock_box, .lizard_box {
+    width: 96px;
+    height: 92.7px;
+    top: 0px;
+    left: 0px;
+  }
+  .paper_outer_gradient, .scissors_outer_gradient, .rock_outer_gradient, .spock_outer_gradient, .lizard_outer_gradient{
+    width: 96px;
+    height: 92.7px;
+    top: 0px;
+    left: 0px;
+  }
+  .paper_inner_gradient,  .scissors_inner_gradient,  .rock_inner_gradient,  .spock_inner_gradient,  .lizard_inner_gradient{
+    width: 74px;
+    height: 74px;
+    top: 0;
+    left: 0;
+    margin: 11px;
+  }
+  .paper_inner_shadow, .scissors_inner_shadow, .rock_inner_shadow, .spock_inner_shadow, .lizard_inner_shadow{
+    width: 74px;
+    height: 74px;
+    top: 0px;
+    left: 0px;
+  }
+  .paper_inner_white, .scissors_inner_white, .rock_inner_white, .spock_inner_white, .lizard_inner_white{
+    width: 74px;
+    height: 70px;
+    top: 3px;
+    left: 0px;
+  }
+  .paper_img, .scissors_img, .rock_img, .spock_img, .lizard_img{
+    width: 47px;
+    height: 46px;
+    top: 0px;
+    left: 0;
+    margin: 17.5%;
+
+  }
+  .paper_img1, .scissors_img1, .rock_img1, .spock_img1, .lizard_img1{
+    width: 47px;
+    height: 46px;
+    top: 3px;
+    left: 0px;
+    
+
+  }
+  /*Paper ends*/
+/*scissors begins*/
+
+
+  
+ .contest .handImageContainer {
+    
+   
+    position: absolute;
+   background-position: center center;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 25%;
+   
+  }
+ .contest{
+  width: 325px;
+  height: 182px;
+  }
+ .contest h1 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 32px;
+  }
+  .stage2 .scissors_inner_gradient {
+    width: 225px;
+    height: 225px;
+    
+    margin-left: 12%;
+    margin-top: 3.5%;
+}
+  .bonus .bg_pentagon{
+    width: 227px;
+    height: 227px;
+    position: absolute;
+    margin-top: 66.5px;
+    justify-self: center;
+    
+  }
+  .bonus .imgPentagon{
+    width: 227px;
+    height: 227px;
+    position: absolute;
+    margin-top: 66.5px;
+    justify-self: center;
+    
+  }
+  .bonus{
+    width: 311px;
+  height: 305px;
+    margin-top: 95px;
+    display: flex;
+      flex-wrap: wrap;
+      
+      justify-content: center;
+      position: relative;
+ 
+
+  }
+  /*Paper begins*/
+  
+.bonus .paper{
+position: absolute;
+margin-left: 110px;
+margin-top: 110px;
+}
+.bonus .rock{
+  position: absolute;
+  margin-top: 234px;
+    margin-left: -38px;
+  }
+.bonus .scissors{
+  margin-right: 0;
+  margin-left: -100px;
+  position: absolute;
+  margin-top: 24px;
+  }
+
+
+/*lizard*/
+.bonus .lizard{
+  position: absolute;
+  margin-top: 234px;
+    margin-left: -145px;
+}
+
+
+ /*spock begins*/
+  .bonus .spock{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: -211px;
+  }
+
+
+  .stage1 .paper_outer_shawdow, .stage4 .paper_outer_shawdow, 
+  .stage2 .scissors_outer_shawdow, .stage5 .scissors_outer_shawdow,
+  .stage3 .rock_outer_shawdow, .stage6 .rock_outer_shawdow, 
+  .stage9 .spock_outer_shawdow, .stage7 .spock_outer_shawdow,
+  .stage8 .lizard_outer_shawdow,  .stage10 .lizard_outer_shawdow{
+    width: 130px;
+    height: 133px;
+    top: 0px;
+    left: 0px;
+  }
+  .stage1 .paper_box, .stage4 .paper_box, 
+  .stage2 .scissors_box, .stage5 .scissors_box,
+  .stage3 .rock_box, .stage6 .rock_box, 
+  .stage9 .spock_box, .stage7 .spock_box,
+  .stage8 .lizard_box, .stage10 .lizard_box {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+  }
+  .stage1 .paper_outer_gradient, .stage4 .paper_outer_gradient, 
+  .stage2 .scissors_outer_gradient, .stage5 .scissors_outer_gradient,
+  .stage3 .rock_outer_gradient, .stage6 .rock_outer_gradient,
+  .stage9 .spock_outer_gradient, .stage7 .spock_outer_gradient,
+  .stage8 .lizard_outer_gradient, .stage10 .lizard_outer_gradient {
+    width: 130px;
+    height: 127px;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+  }
+  .stage1 .paper_inner_gradient, .stage4 .paper_inner_gradient, 
+  .stage2 .scissors_inner_gradient, .stage5 .scissors_inner_gradient,
+  .stage3 .rock_inner_gradient, .stage6 .rock_inner_gradient,
+  .stage9 .spock_inner_gradient, .stage7 .spock_inner_gradient,
+  .stage8 .lizard_inner_gradient, .stage10 .lizard_inner_gradient{
+    width: 100px;
+    height: 100px;
+      top: 0px;
+      left: 0px;
+      margin: 11.4%;
+  }
+  .stage1 .paper_inner_shadow, .stage4 .paper_inner_shadow, 
+  .stage2 .scissors_inner_shadow, .stage5 .scissors_inner_shadow,
+  .stage3 .rock_inner_shadow, .stage6 .rock_inner_shadow,
+  .stage9 .spock_inner_shadow, .stage7 .spock_inner_shadow,
+  .stage8 .lizard_inner_shadow, .stage10 .lizard_inner_shadow{
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+  }
+  .stage1 .paper_inner_white, .stage4 .paper_inner_white, 
+  .stage2 .scissors_inner_white, .stage5 .scissors_inner_white,
+  .stage3 .rock_inner_white, .stage6 .rock_inner_white,
+  .stage9 .spock_inner_white, .stage7 .spock_inner_white,
+  .stage8 .lizard_inner_white, .stage10 .lizard_inner_white {
+    width: 100px;
+    height: 95px;
+      top: 5px;
+      left: 0px;
+      margin: 0;
+      display: grid;
+      border-radius: 50%;
+      justify-content: center;
+  }
+  .stage1 .paper_img, .stage4 .paper_img, 
+  .stage2 .scissors_img, .stage5 .scissors_img,
+  .stage3 .rock_img, .stage6 .rock_img,
+  .stage9 .spock_img, .stage7 .spock_img,
+  .stage8 .lizard_img, .stage10 .lizard_img {
+    width: 63px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 21%;
+
+  }
+  .stage1 .paper_img1, .stage4 .paper_img1, 
+  .stage2 .scissors_img1, .stage5 .scissors_img1,
+  .stage3 .rock_img1, .stage6 .rock_img1,
+  .stage9 .spock_img1, .stage7 .spock_img1,
+  .stage8 .lizard_img1, .stage10 .lizard_img1 {
+    width: 63px;
+    height: 52px;
+    top: 3px;
+    left: 0px;
+    margin: 0;
+  }
+  /*Paper ends*/
+  /*scissors starts*/
+  
+ 
+
+
+}
