@@ -1804,7 +1804,7 @@ margin-left: -225px;
  
  left: 0;
   
- margin-left: 39.2%;
+ margin-left: 40.2%;
  margin-top: 0%;
   cursor: pointer;
   top: 950px;
@@ -1877,6 +1877,7 @@ margin-left: -225px;
  position: absolute;
     margin-top: 400px;
     justify-self: center;
+    margin-left: 13%;
 }
 .userhand, .computerhand {
  margin-bottom: 0;
@@ -2424,7 +2425,7 @@ line-height: 40px;
  
  left: 0;
   
- margin-left: 27%;
+ margin-left: 30%;
  margin-top: 0;
   top: 604px;
   cursor: pointer;
@@ -2500,6 +2501,7 @@ line-height: 40px;
  position: absolute;
     margin-top: 290px;
     justify-self: center;
+    margin-left: 13%;
 }
 .userhand, .computerhand {
  margin-bottom: 0;
