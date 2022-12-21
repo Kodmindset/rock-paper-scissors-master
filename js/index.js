@@ -24,6 +24,10 @@ window.onload = function(){
         stagehands.style.display="flex";
     };
     let rules = document.querySelector(".rules");
+     
+    
+    
+    
    
    
     //let rules =document.querySelector(".rules");
@@ -32,11 +36,14 @@ window.onload = function(){
         if ($(e.target).closest(".showRuleImage").length === 0) {
             $(".showRuleImage").hide();
             $(".ShowRules").css("display","block");
+            $(".hands").css("opacity","1");
+            $(".bonus").css("opacity","1");
            
         }
       
 
     });
+    CloseOnClick();
    
     
    
@@ -50,7 +57,6 @@ window.onload = function(){
 let NumOfScore= JSON.parse(localStorage.getItem('score'));
 
 
-
 const pickUserHand = (hand) => {
   
 
@@ -61,7 +67,7 @@ const pickUserHand = (hand) => {
 
     /*show the next page when clicked*/
     let contest = document.querySelector(".contest");
-    contest.style.display = "flex";
+    contest.style.display = "grid";
     let bonus = document.querySelector(".bonus");
     bonus.style.display = "none";
 
@@ -432,17 +438,28 @@ const newGame =()=>{
     }
 
 }
+
+const ruleBackground = ()=>{
+    let wrapper = document.querySelector(".wrapper");
+    
+    wrapper.body.background = url("./images/image-rules-bonus.svg");
+}
 const RulesOnClick =()=>{
      /*hind the current page*/
     
-     let contest = document.querySelector(".contest");
+     /*let contest = document.querySelector(".contest");
      contest.style.display = "none";
      let ShowRules = document.querySelector(".ShowRules");
-     ShowRules.style.display = "none";
-    /*const stagehands = document.querySelector(".hands");
+     ShowRules.style.display = "none";*/
+    const stagehands = document.querySelector(".hands");
     const stagebonus = document.querySelector(".bonus");
-    stagehands.style.display = "none";
-    stagebonus.style.display = "none"; */
+    const ShowRules = document.querySelector(".ShowRules");
+    
+    stagebonus.style.opacity = "0.75";
+    stagehands.style.opacity = "0.75";
+    ShowRules.style.display="none";
+   
+   
 
      /*show the Rules page when clicked*/
     const showImage =document.querySelector(".showRuleImage");
@@ -450,22 +467,25 @@ const RulesOnClick =()=>{
     showImage.style.display="grid";
 
     const close =document.querySelector(".close");
-    close.style.display="none";
+    close.style.display="flex";
 
+    let wrapper = document.querySelector(".wrapper");
     
+   // wrapper.style.backgroundImage = "url(./images/image-rules-bonus.svg)";
     
 }
 const CloseOnClick =()=>{
      /*hind the current page*/
-     
- 
      /*show the next page when clicked*/
-     let NumOfScore= JSON.parse(localStorage.getItem('score'));
+     /*let NumOfScore= JSON.parse(localStorage.getItem('score'));
      
      const rules_image =document.querySelector(".rules_image");
     rules_image.style.display="none";
+    const closeImg =document.querySelector(".close_img");
+    closeImg.style.display="flex";
+
     const close =document.querySelector(".close");
-    close.style.display="none";
+    close.style.display="flex";
     
     const rules = document.querySelector(".ShowRules");
     rules.style.display="flex";
@@ -489,11 +509,21 @@ const CloseOnClick =()=>{
    else{
        stagebonus.style.display="none";
        stagehands.style.display="flex";
-   }
+   }*/
     
       
 
+   $(document).mouseup(function (e) {
+    if ($(e.target).closest(".close").length === 1) {
+        $(".showRuleImage").hide();
+        $(".ShowRules").css("display","block");
+        $(".hands").css("opacity","1");
+        $(".bonus").css("opacity","1");
+       
+    }
+  
 
+});
    
 
 
