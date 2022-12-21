@@ -28,10 +28,12 @@ window.onload = function(){
    
     //let rules =document.querySelector(".rules");
     
+    
     $(document).mouseup(function (e) {
-        if ($(e.target).closest(".showRuleImage").length === 0) {
+        if ($(e.target).closest(".close").length === 1) {
             $(".showRuleImage").hide();
             $(".ShowRules").css("display","block");
+            
            
         }
       
@@ -450,7 +452,7 @@ const RulesOnClick =()=>{
     showImage.style.display="grid";
 
     const close =document.querySelector(".close");
-    close.style.display="none";
+    close.style.display="flex";
 
     
     
