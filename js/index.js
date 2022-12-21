@@ -36,6 +36,7 @@ window.onload = function(){
 
             $(".hands").css("opacity","1");
             $(".bonus").css("opacity","1");
+            $(".contest").css("opacity","1");
             
            
         }
@@ -440,8 +441,7 @@ const newGame =()=>{
 const RulesOnClick =()=>{
      /*hind the current page*/
     
-     let contest = document.querySelector(".contest");
-     contest.style.display = "none";
+     
      let ShowRules = document.querySelector(".ShowRules");
      ShowRules.style.display = "none";
     /*const stagehands = document.querySelector(".hands");
