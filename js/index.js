@@ -33,6 +33,9 @@ window.onload = function(){
         if ($(e.target).closest(".close").length === 1) {
             $(".showRuleImage").hide();
             $(".ShowRules").css("display","block");
+
+            $(".hands").css("opacity","1");
+            $(".bonus").css("opacity","1");
             
            
         }
