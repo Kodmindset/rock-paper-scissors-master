@@ -316,7 +316,7 @@ const referee2 =(userHand,cphand)=>{
     
     if(userHand =="paper" && cphand=="scissors"){
     setDecision("YOU LOSE!");
-    setScore(NumOfScore - 1);
+     setScore_neg(NumOfScore - 1);
     
     }
 if(userHand =="paper" && cphand=="rock"){
@@ -333,12 +333,12 @@ if(userHand =="paper" && cphand=="rock"){
         }
  if(userHand =="paper" && cphand=="lizard"){
     setDecision("YOU LOSE!");
-        setScore(NumOfScore - 1);
+        setScore_neg(NumOfScore - 1);
         
         }
 if(userHand =="paper" && cphand=="paper"){
         setDecision("It's a tie!")
-        setScore(NumOfScore==NumOfScore);
+        
         
         }
         //rock
@@ -349,7 +349,7 @@ if(userHand =="paper" && cphand=="paper"){
         }
   if(userHand =="rock" && cphand=="spock"){
     setDecision("YOU LOSE!");
-        setScore(NumOfScore - 1);
+         setScore_neg(NumOfScore - 1);
         }
    if(userHand =="rock" && cphand=="lizard"){
         setDecision("YOU WIN!");
@@ -358,17 +358,17 @@ if(userHand =="paper" && cphand=="paper"){
         }
     if(userHand =="rock" && cphand=="paper"){
         setDecision("YOU LOSE!");
-        setScore(NumOfScore - 1);
+        setScore_neg(NumOfScore - 1);
         
         }
 
      if(userHand =="rock" && cphand=="rock"){
         setDecision("YOU LOSE!");
-        setScore(NumOfScore==NumOfScore);
+         setScore_neg(NumOfScore - 1);
         }
         //scissors
      if(userHand =="scissors" && cphand=="rock"){
-        setDecision("YOU LOSE!" + "rock");
+        setDecision("YOU LOSE!");
         setScore(NumOfScore - 1);
         }
      if(userHand =="scissors" && cphand=="paper"){
@@ -377,7 +377,7 @@ if(userHand =="paper" && cphand=="paper"){
         }
      if(userHand =="scissors" && cphand=="spock"){
         setDecision("YOU LOSE!");
-        setScore(NumOfScore - 1);
+         setScore_neg(NumOfScore - 1);
         }
      if(userHand =="scissors" && cphand=="lizard"){
         setDecision("YOU WIN!")
@@ -385,7 +385,7 @@ if(userHand =="paper" && cphand=="paper"){
         }
     if(userHand =="scissors" && cphand=="scissors"){
         setDecision("It's a tie!");
-       NumOfScore=NumOfScore;
+       
         }
 
         //new
@@ -396,7 +396,7 @@ if(userHand =="paper" && cphand=="paper"){
         }
      if(userHand =="lizard" && cphand=="scissors"){
         setDecision("YOU LOSE!");
-        setScore(NumOfScore - 1);
+         setScore_neg(NumOfScore - 1);
         }
      if(userHand =="lizard" && cphand=="paper"){
         setDecision("YOU WIN!")
@@ -408,7 +408,7 @@ if(userHand =="paper" && cphand=="paper"){
         }
      if(userHand =="lizard" && cphand=="lizard"){
         setDecision("It's a tie!");
-        NumOfScore=NumOfScore;
+       
         }
 
 //spock
@@ -428,16 +428,16 @@ if(userHand =="paper" && cphand=="paper"){
         }
      if(userHand =="spock" && cphand=="paper"){
         setDecision("YOU LOSE!");
-        setScore(NumOfScore - 1);
+         setScore_neg(NumOfScore - 1);
         
         }
      if(userHand =="spock" && cphand=="lizard"){
         setDecision("YOU LOSE!");
-        setScore(NumOfScore - 1);
+         setScore_neg(NumOfScore - 1);
         }
      if(userHand =="spock" && cphand=="spock"){
         setDecision("It's a tie!");
-        setScore(NumOfScore=NumOfScore);
+       
         }
 
 }
@@ -523,7 +523,7 @@ const CloseOnClick =()=>{
 
     const stagehands = document.querySelector(".hands");
     const stagebonus = document.querySelector(".bonus");
-    const showDefault =0;
+    const showDefault = NumOfScore;
 
 
    if(NumOfScore>=12){
@@ -552,7 +552,9 @@ const CloseOnClick =()=>{
 
 
 
-const setDecision =(decision)=>{
+      
+
+let setDecision =(decision)=>{
    
     
     const redcolor =document.querySelector(".newGame");
@@ -565,7 +567,7 @@ const setDecision =(decision)=>{
             redcolor.addEventListener('mouseout', function handleMouseOver(){
                 redcolor.style.color="hsl(229,25%,31%)";
             });
-            $(".computer").css({"box-shadow": "0 0 0 40px #293251, 0 0 0 80px #232c4d, 0 0 0 130px #1e2949", "border-radius": "50%", "z-index": "1", "transition": "opacity 0.4s ease"});
+            $(".computer").css({"box-shadow": "0 0 0 40px #293251, 0 0 0 80px #232c4d, 0 0 0 130px #1e2949", "border-radius": "50%", "transition": "opacity 0.4s ease"});
             $(".user").css("box-shadow","none");
             $(".userchoice").css("z-index","1");
             $(".computerchoice").css("z-index","0");
