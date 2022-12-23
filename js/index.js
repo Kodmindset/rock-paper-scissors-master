@@ -282,12 +282,12 @@ const referee1 =(userHand,cphand)=>{
     if(userHand =="paper" && cphand=="scissors"){
     setDecision("YOU LOSE!")
     setScore(NumOfScore - 1);
-    choice = cphand;
+    
     }
     else if(userHand =="paper" && cphand=="rock"){
         setDecision("YOU WIN!")
         setScore(NumOfScore + 1);
-        choice =userHand; 
+        
         }
     else if(userHand =="paper" && cphand=="paper"){
         setDecision("It's a tie!")
@@ -295,12 +295,12 @@ const referee1 =(userHand,cphand)=>{
     else if(userHand =="rock" && cphand=="scissors"){
         setDecision("YOU WIN!")
         setScore(NumOfScore + 1);
-        choice =userHand;
+        
         }
     else if(userHand =="rock" && cphand=="paper"){
         setDecision("YOU LOSE!")
         setScore(NumOfScore - 1);
-        choice =cphand;   
+        
        
         }
     else if(userHand =="rock" && cphand=="rock"){
@@ -324,29 +324,27 @@ const referee1 =(userHand,cphand)=>{
 }
 const referee2 =(userHand,cphand)=>{
     
-
-
     if(userHand =="paper" && cphand=="scissors"){
     setDecision("YOU LOSE!" + scissorsStage5);
     setScore(NumOfScore - 1);
-    gethand(scissorsStage5);
+    
     }
 if(userHand =="paper" && cphand=="rock"){
         setDecision("YOU WIN!");
         setScore(NumOfScore + 1);
-        gethand(paperStage1);
+        
         
         }
  if(userHand =="paper" && cphand=="spock"){
         setDecision("YOU WIN!");
         setScore(NumOfScore + 1);
-        gethand(paperStage1);
+        
         
         }
  if(userHand =="paper" && cphand=="lizard"){
-    setDecision("YOU LOSE!" + cphand);
+    setDecision("YOU LOSE!");
         setScore(NumOfScore - 1);
-        gethand(lizardStage8);
+        
         }
 if(userHand =="paper" && cphand=="paper"){
         setDecision("It's a tie!")
@@ -357,25 +355,25 @@ if(userHand =="paper" && cphand=="paper"){
  if(userHand =="rock" && cphand=="scissors"){
         setDecision("YOU WIN!")
         setScore(NumOfScore + 1);
-        gethand(rockStage3);
+        
         }
   if(userHand =="rock" && cphand=="spock"){
-    setDecision("YOU LOSE!" + ".rock");
+    setDecision("YOU LOSE!");
         setScore(NumOfScore - 1);
         }
    if(userHand =="rock" && cphand=="lizard"){
         setDecision("YOU WIN!");
         setScore(NumOfScore + 1);
-        gethand(rockStage3);
+        
         }
     if(userHand =="rock" && cphand=="paper"){
-        setDecision("YOU LOSE!" + ".rock");
+        setDecision("YOU LOSE!");
         setScore(NumOfScore - 1);
-        gethand(cphand);
+        
         }
 
      if(userHand =="rock" && cphand=="rock"){
-        setDecision("YOU LOSE!" + ".rock");
+        setDecision("YOU LOSE!");
         setScore(NumOfScore=NumOfScore);
         }
         //scissors
@@ -429,7 +427,7 @@ if(userHand =="paper" && cphand=="paper"){
         const spock = document.querySelector(".stage9");
         setDecision("YOU WIN!")
         setScore(NumOfScore + 1)
-        gethand(userHand);
+        
         
         
         }
@@ -437,12 +435,12 @@ if(userHand =="paper" && cphand=="paper"){
         const spock = document.querySelector(".stage9");
         setDecision("YOU WIN!");
         setScore(NumOfScore + 1);
-        gethand(userHand);
+        
         }
      if(userHand =="spock" && cphand=="paper"){
         setDecision("YOU LOSE!");
         setScore(NumOfScore - 1);
-        gethand(cphand);
+        
         }
      if(userHand =="spock" && cphand=="lizard"){
         setDecision("YOU LOSE!");
