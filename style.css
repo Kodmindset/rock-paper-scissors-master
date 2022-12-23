@@ -156,19 +156,18 @@ transform: translate3d(0px, -8px, 0px);
   
   
 }
-.rock:hover, .scissors:hover, .lizard:hover, .spock:hover{
+.rock:hover, .scissors:hover, .lizard:hover, .spock:hover, .paper:hover{
+  border-radius: 50%;
   box-shadow: 0 0 0 40px #293251;
     opacity: 1;
-    border-radius: 50%;
-}
-.paper{
- /*box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4d, 0 0 0 130px #1e2949;
-    border-radius: 50%;
-    transform: scale(1.4);
-    z-index: 1;
-    transition: opacity 0.4s ease;*/
     
 }
+.hand:hover{
+  border-radius: 50%;
+  box-shadow: 0 0 0 40px #293251;
+    opacity: 1;
+}
+
 .try{
   width: 312px;
   height: 312px;
@@ -1247,7 +1246,6 @@ height: 463px;
     
     justify-content: center;
     position: relative;
-z-index: -1;
 
 }
 /*Paper begins*/
@@ -2482,8 +2480,9 @@ line-height: 40px;
   display: none;
   width: 100vw;
     height: 100vh;
-    margin-top: -110px;
+    margin-top: 90px;
     border-radius: 2%;
+    z-index: 1;
     
 }
 .showRuleImage h1{
@@ -2603,7 +2602,7 @@ line-height: 40px;
     top: 3px;
     left: 0px;
   }
-  .paper_img, .scissors_img, .rock_img, .spock_img, .lizard_img{
+  .paper_img, .scissors_img, .rock_img, .spock_img{
     width: 47px;
     height: 46px;
     top: 0px;
@@ -2611,13 +2610,24 @@ line-height: 40px;
     margin: 17.5%;
 
   }
-  .paper_img1, .scissors_img1, .rock_img1, .spock_img1, .lizard_img1{
+  .paper_img1, .scissors_img1, .rock_img1, .spock_img1{
     width: 47px;
     height: 46px;
     top: 3px;
     left: 0px;
     
 
+  }
+  .lizard_img{
+    width: 60px;
+    height: 67px;
+    margin: 16%;
+  }
+  .img_lizard{
+    background: none;
+    width: 47px;
+    height: 46px;
+    margin: 8%;
   }
   /*Paper ends*/
 /*scissors begins*/
@@ -2806,6 +2816,7 @@ margin-top: 110px;
     left: 0px;
     margin: 0;
   }
+  .
   /*Paper ends*/
   /*scissors starts*/
   
