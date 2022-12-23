@@ -6,7 +6,7 @@ window.onload = function(){
      const stagehands = document.querySelector(".hands");
      const stagebonus = document.querySelector(".bonus");
     
-     const showDefault =0;
+     const showDefault =NumOfScore;
 
 
     if(NumOfScore>=12){
@@ -50,17 +50,7 @@ window.onload = function(){
 
     
 }
-let boxShadow =()=>{
-    let choice =cphand;
-    if(choice==userHand){
-        $(".user").css({"box-shadow": "0 0 0 40px #293251, 0 0 0 80px #232c4d, 0 0 0 130px #1e2949", "border-radius": "50%", "transform": "scale(1.4)","z-index": "1", "transition": "opacity 0.4s ease"});
 
-    }
-    if(choice===cphand){
-        $(".computer").css({"box-shadow": "0 0 0 40px #293251, 0 0 0 80px #232c4d, 0 0 0 130px #1e2949", "border-radius": "50%", "transform": "scale(1.4)","z-index": "1", "transition": "opacity 0.4s ease"});
-
-    }
-}
 
 let NumOfScore= JSON.parse(localStorage.getItem('score'));
 
@@ -146,7 +136,7 @@ const pickUserHand = (hand) => {
    
     let NumOfScore= JSON.parse(localStorage.getItem('score'));
     document.querySelector(".score h1").innerText=NumOfScore;
-    const showDefault =0;
+    const showDefault =NumOfScore;
    
     if(NumOfScore>=12){
         let cphand=pickComputerHand2();
@@ -281,7 +271,7 @@ const pickComputerHand2 = ()=>{
 const referee1 =(userHand,cphand)=>{
     if(userHand =="paper" && cphand=="scissors"){
     setDecision("YOU LOSE!")
-    setScore(NumOfScore - 1);
+    setScore_neg(NumOfScore - 1);
     
     }
     else if(userHand =="paper" && cphand=="rock"){
@@ -299,7 +289,7 @@ const referee1 =(userHand,cphand)=>{
         }
     else if(userHand =="rock" && cphand=="paper"){
         setDecision("YOU LOSE!")
-        setScore(NumOfScore - 1);
+        setScore_neg(NumOfScore - 1);
         
        
         }
@@ -309,7 +299,7 @@ const referee1 =(userHand,cphand)=>{
         }
     else if(userHand =="scissors" && cphand=="rock"){
         setDecision("YOU LOSE!")
-        setScore(NumOfScore - 1);
+        setScore_neg(NumOfScore - 1);
         
         }
     else if(userHand =="scissors" && cphand=="paper"){
@@ -325,7 +315,7 @@ const referee1 =(userHand,cphand)=>{
 const referee2 =(userHand,cphand)=>{
     
     if(userHand =="paper" && cphand=="scissors"){
-    setDecision("YOU LOSE!" + scissorsStage5);
+    setDecision("YOU LOSE!");
     setScore(NumOfScore - 1);
     
     }
@@ -348,7 +338,7 @@ if(userHand =="paper" && cphand=="rock"){
         }
 if(userHand =="paper" && cphand=="paper"){
         setDecision("It's a tie!")
-        setScore(NumOfScore=NumOfScore);
+        setScore(NumOfScore==NumOfScore);
         
         }
         //rock
@@ -374,7 +364,7 @@ if(userHand =="paper" && cphand=="paper"){
 
      if(userHand =="rock" && cphand=="rock"){
         setDecision("YOU LOSE!");
-        setScore(NumOfScore=NumOfScore);
+        setScore(NumOfScore==NumOfScore);
         }
         //scissors
      if(userHand =="scissors" && cphand=="rock"){
@@ -395,7 +385,7 @@ if(userHand =="paper" && cphand=="paper"){
         }
     if(userHand =="scissors" && cphand=="scissors"){
         setDecision("It's a tie!");
-        setScore(NumOfScore=NumOfScore);
+       NumOfScore=NumOfScore;
         }
 
         //new
@@ -418,8 +408,7 @@ if(userHand =="paper" && cphand=="paper"){
         }
      if(userHand =="lizard" && cphand=="lizard"){
         setDecision("It's a tie!");
-        setScore(NumOfScore=NumOfScore);
-
+        NumOfScore=NumOfScore;
         }
 
 //spock
@@ -473,7 +462,7 @@ const newGame =()=>{
     let NumOfScore= JSON.parse(localStorage.getItem('score'));
     const stagehands = document.querySelector(".hands");
     const stagebonus = document.querySelector(".bonus");
-    const showDefault =0;
+    const showDefault =NumOfScore;
 
 
     if(NumOfScore>=12){
@@ -494,7 +483,9 @@ const newGame =()=>{
 }
 const RulesOnClick =()=>{
      /*hind the current page*/
-    
+     $(".hands").css("opacity","0.7");
+            $(".bonus").css("opacity","0.7");
+            $(".contest").css("opacity","0.7");
      
      let ShowRules = document.querySelector(".ShowRules");
      ShowRules.style.display = "none";
@@ -637,7 +628,28 @@ const setScore =(score)=>{
     
     // get old data and add to new data
     let old_data= JSON.parse(localStorage.getItem('score'));
-//old_data = old_data + 1;
+old_data = old_data + 1;
+    
+    // now save oldd data + new data to the local storage
+    score=localStorage.setItem('score', JSON.parse(old_data));
+
+   
+   NumOfScore = JSON.parseInt(score);
+
+}
+const setScore_neg =(score)=>{
+    NumOfScore = score;
+    let new_data = document.querySelector(".score h1").innerText = score;
+
+    
+
+  if(localStorage.getItem('score')==null){
+        localStorage.setItem('score',0);
+    }
+    
+    // get old data and add to new data
+    let old_data= JSON.parse(localStorage.getItem('score'));
+old_data = old_data - 1;
     
     // now save oldd data + new data to the local storage
     score=localStorage.setItem('score', JSON.parse(old_data));

@@ -10,11 +10,11 @@
 body{
   font-family: "Barlow Semi Condensed", sans-serif;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
 }
 .wrapper{
-  width: 1366px;
-height: 768px;
+  width: 100vw;
+height: 100vh;
   background: radial-gradient(134.34% 134.43% at 50% 0%, #1f3757 0%, #131537 100%);
   display: flex;
   flex-direction: column;
@@ -78,13 +78,23 @@ margin-top: -58px;
     padding-bottom: 1.5rem;
 }
 .showRuleImage{
-  width: 400px;
-  height: 461px;
-  margin-top: -500px;
+  width: 380px;
+  height: 475px;
+ top: 0;
   background: #FFFFFF;
-justify-content: center;
-position: relative;
+position: fixed;
 display: none;
+z-index: 1;
+
+   
+    left: 0;
+    right: 0;
+    margin: 0;
+    margin-top: 12%;
+    margin-left: 35.86%;
+    margin-right: 35.86%;
+    justify-content:center
+
 }
 .ShowRules{
 font-weight: 600;
@@ -98,7 +108,7 @@ border: 1px solid  #FFFFFF;
 padding: 12px 24px;
 position: absolute;
 
-margin-top: 10px;
+margin-top: 120px;
 cursor: pointer;
 margin-left: 35%;
 
@@ -120,6 +130,7 @@ transform: translate3d(0px, -2px, 0px);
 width: 336px;
 height: 330px;
 align-self: center;
+margin-bottom: 15%;
 
   
 }
@@ -1489,8 +1500,11 @@ margin-left: -225px;
 /*Media query for laptops*/
  /*for laptops*/
       
- @media all and (min-width: 1025px) and (max-width: 1365px){
-
+ @media all and (min-width: 1025px) and (max-width: 1366px){
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
   .bonus{
     margin-top: 10px;
   }
@@ -1501,9 +1515,15 @@ margin-left: -225px;
 }
   .ShowRules{
     
-    margin-top: -20px;
+    margin-top: 20px;
     cursor: pointer;
     margin-left: 428px;
+}
+.rules_image {
+  width: 300px;
+  height: 300px;
+  align-self: center;
+  margin-bottom: 15%;
 }
 .scoreboard {
   
@@ -1534,8 +1554,10 @@ margin-left: -225px;
   
 }
 .showRuleImage {
-  height: 400px;
-  margin-top: -113%;
+  height: 415px;
+  margin-top: 8%;
+  margin-left: 36.1%;
+    margin-right: 36.1%;
 }
 .paper_outer_shawdow {
   width: 135px;
@@ -1828,6 +1850,7 @@ margin-left: -225px;
 .hands{
   width: 413px;
   height: 382px;
+  z-index: 1;
    
 }
 .hands .rock {
@@ -1835,20 +1858,19 @@ margin-left: -225px;
 }
 .ShowRules {
  
- left: 0;
-  
- margin-left: 40.2%;
- margin-top: 0%;
+  left: 0;
+  margin-left: 0;
+  margin-top: 0%;
   cursor: pointer;
-  top: 950px;
-  position: absolute;
+  margin-top: 600%;
+  position: static;
+  z-index: 0;
 }
 
 .rules{
   display: flex;
-  margin-top: -70%;
-  margin-left: auto;
-    margin-right: auto;
+  margin: 0;
+  position: absolute;
 
 }
 .showRuleImage{
@@ -1857,7 +1879,9 @@ margin-left: -225px;
   display: none;
   width: 100vw;
     height: 100vh;
-    margin-top: 60px; /*-120*/
+    margin: 0;
+    left: 0;
+    right: 0;
     border-radius: 2%;
     
 }
@@ -1866,7 +1890,7 @@ margin-left: -225px;
   height: 32px;
   justify-self: center;
     align-self: center;
-    margin-top: 5px;
+    margin-top: 55px;
     /*margin-bottom: 96px;*/
 }
 
@@ -1874,7 +1898,7 @@ margin-left: -225px;
   
   width: 450px;
     height: 450px;
-    margin-top: -192px;
+    margin: 0;
     
  
     
@@ -1907,10 +1931,14 @@ margin-left: -225px;
     grid-template-columns: repeat(2,1fr);
 }
 .referee {
- position: absolute;
-    margin-top: 400px;
-    justify-self: center;
-    margin-left: 13%;
+  position: absolute;
+  margin-top: 80%;
+  justify-self: center;
+  margin-left: 0;
+  left: 0;
+  align-self: center;
+  right: 0;
+  place-content: center;
 }
 .userhand, .computerhand {
  margin-bottom: 0;
@@ -1919,6 +1947,7 @@ margin-left: -225px;
 
 .decision{
   margin-top: -67px;
+  position: static;
   
   
 }
@@ -2153,7 +2182,9 @@ margin-left: -225px;
 
   }
   /*Paper begins*/
-  
+.bonus{
+  z-index: 1;
+}
 .bonus .paper{
 position: absolute;
 margin-left: 160px;
@@ -2456,22 +2487,24 @@ line-height: 40px;
 }
 .ShowRules {
  
- left: 0;
-  
- margin-left: 30%;
- margin-top: 0;
+  left: 0;
+  margin-left: 0;
+  margin-top: 0%;
+  cursor: pointer;
+  top: 950px;
+  position: static;
   top: 604px;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   
 }
 
 
 .rules{
   display: flex;
-  margin-top: -70%;
-  margin-left: auto;
-    margin-right: auto;
+  margin-top: 0%;
+ margin: 0;
+    position: absolute;
 
 }
 .showRuleImage{
@@ -2480,9 +2513,11 @@ line-height: 40px;
   display: none;
   width: 100vw;
     height: 100vh;
-    margin-top: 90px;
     border-radius: 2%;
     z-index: 1;
+    margin: 0;
+    left: 0;
+    right: 0;
     
 }
 .showRuleImage h1{
@@ -2490,7 +2525,7 @@ line-height: 40px;
   height: 32px;
   justify-self: center;
     align-self: center;
-    margin-top: 5px;
+    margin-top: 55px;
     margin-left: -7%;
     /*margin-bottom: 96px;*/
 }
@@ -2532,10 +2567,14 @@ line-height: 40px;
     grid-template-columns: repeat(2,1fr);
 }
 .referee {
- position: absolute;
-    margin-top: 290px;
-    justify-self: center;
-    margin-left: 13%;
+  position: absolute;
+  margin-top: 450px;
+  justify-self: center;
+  margin-left: 0;
+  left: 0;
+  align-self: center;
+  right: 0;
+  place-content: center;
 }
 .userhand, .computerhand {
  margin-bottom: 0;
@@ -2544,6 +2583,7 @@ line-height: 40px;
 
 .decision{
   margin-top: -67px;
+  position: static;
   
   
 }
