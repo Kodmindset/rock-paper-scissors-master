@@ -51,32 +51,32 @@ window.onload = function(){
     $(".computerShadow").css("display","none");
  
 //hover state
-    $(".hand.paper").hover(function(){
-        $(".paper_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+    $(".hand.paper_outer_shawdow").hover(function(){
+        $(this).css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
         $(".paper_outer_shawdow").css("box-shadow","none");
       });
-    $(".hand.scissors").hover(function(){
-        $(".scissors_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+    $(".hand.scissors.scissors").hover(function(){
+        $(this).css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
         
             $(".scissors_outer_shawdow").css("box-shadow","none");
            
       });
-    $(".hand.rock").hover(function(){
-        $(".rock_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+    $(".hand.rock.rock_outer_shawdow").hover(function(){
+        $(this).css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
             $(".rock_outer_shawdow").css("box-shadow","none");
            
       });
-    $(".hand.lizard").hover(function(){
-        $(".lizard_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+    $(".hand.lizard.lizard_outer_shawdow").hover(function(){
+        $(this).css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
             $(".lizard_outer_shawdow").css("box-shadow","none");
 
       });
-    $(".hand.spock").hover(function(){
-        $(".spock_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+    $(".hand.spock.spock_outer_shawdow").hover(function(){
+        $(this).css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
             $(".spock_outer_shawdow").css("box-shadow","none");
             

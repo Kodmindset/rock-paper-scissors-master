@@ -1821,7 +1821,12 @@ margin-left: -225px;
 
 }
 /*Media Query for tablets*/
+/*scissors_outer_shawdow, .rock_outer_shawdow, .spock_outer_shawdow, .lizard_outer_shawdow */
+
+  
+
 @media screen and (min-width: 768px) and (max-width: 1024px){
+ 
 .wrapper{
   width: 100vw;
   height: 100vh;
