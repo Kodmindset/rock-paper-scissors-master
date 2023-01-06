@@ -181,17 +181,8 @@ transform: translate3d(0px, -8px, 0px);
   
   
 }
-.rock:hover, .scissors:hover, .lizard:hover, .spock:hover, .paper:hover{
-  border-radius: 50%;
-  box-shadow: 0 0 0 40px #293251;
-    opacity: 1;
-    
-}
-.hand:hover{
-  border-radius: 50%;
-  box-shadow: 0 0 0 40px #293251;
-    opacity: 1;
-}
+
+
 
 .try{
   width: 312px;
