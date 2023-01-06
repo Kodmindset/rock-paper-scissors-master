@@ -51,35 +51,35 @@ window.onload = function(){
     $(".computerShadow").css("display","none");
  
 //hover state
-    $(".paper").hover(function(){
+    $(".hand.paper").hover(function(){
         $(".paper_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
         $(".paper_outer_shawdow").css("box-shadow","none");
       });
-    $(".scissors").hover(function(){
+    $(".hand.scissors").hover(function(){
         $(".scissors_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
         
             $(".scissors_outer_shawdow").css("box-shadow","none");
            
-
       });
-    $(".rock").hover(function(){
+    $(".hand.rock").hover(function(){
         $(".rock_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
             $(".rock_outer_shawdow").css("box-shadow","none");
            
       });
-    $(".lizard").hover(function(){
+    $(".hand.lizard").hover(function(){
         $(".lizard_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
             $(".lizard_outer_shawdow").css("box-shadow","none");
 
       });
-    $(".spock").hover(function(){
+    $(".hand.spock").hover(function(){
         $(".spock_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
             $(".spock_outer_shawdow").css("box-shadow","none");
+            
       });
     
 
@@ -177,7 +177,7 @@ const pickUserHand = (hand) => {
    // referee1(hand,cphand);
    
     let NumOfScore= JSON.parse(localStorage.getItem('score'));
-    document.querySelector(".score h1").innerText=NumOfScore;
+    //document.querySelector(".score h1").innerText=NumOfScore;
     const showDefault =NumOfScore;
    
     if(NumOfScore>=12){
@@ -202,9 +202,7 @@ const pickUserHand = (hand) => {
         }, 500);
       
     }
-  
-
-
+    
   
     return hand;
 
@@ -291,7 +289,7 @@ const pickComputerHand = ()=>{
 
         
     }
-    
+   
     return cphands;
     
   

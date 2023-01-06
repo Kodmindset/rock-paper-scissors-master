@@ -173,6 +173,7 @@ transition: all 0.25s;
 .hand:hover{
 transform: translate3d(0px, -8px, 0px);
 }
+
 /*Paper begins*/
 .paper{
  
@@ -1520,7 +1521,7 @@ margin-left: -225px;
 }
   .ShowRules{
     
-    margin-top: 20px;
+    margin-top: 5px;
     cursor: pointer;
     margin-left: 428px;
 }
@@ -2445,6 +2446,7 @@ margin-top: 119px;
   width: 100vw;
   height: 100vh;
 }
+
   .scoreboard{
     width: 311px;
     border: 1px solid white;
