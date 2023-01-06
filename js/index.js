@@ -49,7 +49,40 @@ window.onload = function(){
    
    
     $(".computerShadow").css("display","none");
-   
+ 
+//hover state
+    $(".paper").hover(function(){
+        $(".paper_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+        }, function(){
+        $(".paper_outer_shawdow").css("box-shadow","none");
+      });
+    $(".scissors").hover(function(){
+        $(".scissors_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+        }, function(){
+        
+            $(".scissors_outer_shawdow").css("box-shadow","none");
+           
+
+      });
+    $(".rock").hover(function(){
+        $(".rock_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+        }, function(){
+            $(".rock_outer_shawdow").css("box-shadow","none");
+           
+      });
+    $(".lizard").hover(function(){
+        $(".lizard_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+        }, function(){
+            $(".lizard_outer_shawdow").css("box-shadow","none");
+
+      });
+    $(".spock").hover(function(){
+        $(".spock_outer_shawdow").css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
+        }, function(){
+            $(".spock_outer_shawdow").css("box-shadow","none");
+      });
+    
+
     
 }
 
@@ -696,25 +729,6 @@ let setDecision =(decision)=>{
     }
 
 
-
-    /*//userhand
-    let paperStage1 = document.querySelector(".stage1");
-    let scissorsStage2 = document.querySelector(".stage2");
-    let rockStage3 = document.querySelector(".stage3");
-    let spockStage9 = document.querySelector(".stage9");
-    let lizardStage10 = document.querySelector(".stage10");
-    //computerhand
-    */
-   
-    /*
-    /*box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4d, 0 0 0 130px #1e2949;
-    border-radius: 50%;
-    transform: scale(1.4);
-    z-index: 1;
-    transition: opacity 0.4s ease;*/
-    
-
-
 const setScore =(score)=>{
     NumOfScore = score;
     let new_data = document.querySelector(".score h1").innerText = score;
@@ -772,14 +786,3 @@ const gethand =(gethands)=>{
 
 
 
-/*  if(localStorage.getItem('data')==null){
-        localStorage.setItem('data','[]');
-    }
-    
-    // get old data and add to new data
-    let old_data= JSON.parse(localStorage.getItem('data'));
-    old_data.push(3);
-    
-    // now save oldd data + new data to the local storage
-    score = localStorage.setItem('data',JSON.stringify(old_data));
-   document.querySelector(".score h1").innerText = score;*/
