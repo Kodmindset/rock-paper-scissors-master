@@ -56,7 +56,7 @@ window.onload = function(){
         }, function(){
         $(".paper_outer_shawdow").css("box-shadow","none");
       });
-    $(".hand.scissors.scissors").hover(function(){
+    $(".hand.scissors.scissors_outer_shawdow").hover(function(){
         $(this).css({"box-shadow": "0 0 0 40px #293251", "border-radius": "50%"});
         }, function(){
         
