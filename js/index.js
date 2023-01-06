@@ -1,3 +1,5 @@
+
+
 window.onload = function(){
     
     let NumOfScore= JSON.parse(localStorage.getItem('score'));
@@ -46,10 +48,11 @@ window.onload = function(){
     });
    
    
-    
-
+    $(".computerShadow").css("display","none");
+   
     
 }
+
 
 
 let NumOfScore= JSON.parse(localStorage.getItem('score'));
@@ -58,7 +61,7 @@ let NumOfScore= JSON.parse(localStorage.getItem('score'));
 
 const pickUserHand = (hand) => {
   
-
+    $(".computerShadow").css("display","none");
 
     /*hind the current page*/
     let hands = document.querySelector(".hands");
@@ -69,6 +72,7 @@ const pickUserHand = (hand) => {
     contest.style.display = "flex";
     let bonus = document.querySelector(".bonus");
     bonus.style.display = "none";
+    
 
 
 
@@ -90,6 +94,7 @@ const pickUserHand = (hand) => {
         lizardStage10.style.display= "none";
 
         rockStage3.style.display= "flex";
+        $(".computerShadow").css("display","flex");
     }
     else if(hand=="paper"){
         scissorsStage2.style.display= "none";
@@ -98,6 +103,7 @@ const pickUserHand = (hand) => {
         lizardStage10.style.display= "none";
        
         paperStage1.style.display= "flex";
+        $(".computerShadow").css("display","flex");
     }
     else if(hand=="scissors"){
         rockStage3.style.display= "none";
@@ -106,6 +112,7 @@ const pickUserHand = (hand) => {
         lizardStage10.style.display= "none";
        
         scissorsStage2.style.display= "flex";
+        $(".computerShadow").css("display","flex");
 
     }
     else if(hand=="spock"){
@@ -115,6 +122,7 @@ const pickUserHand = (hand) => {
         scissorsStage2.style.display= "none";
         
         spockStage9.style.display= "flex";
+        $(".computerShadow").css("display","flex");
 
     }
     else if(hand=="lizard"){
@@ -126,6 +134,7 @@ const pickUserHand = (hand) => {
        
        
         lizardStage10.style.display= "flex";
+        $(".computerShadow").css("display","flex");
 
     }
     //let cphand=pickComputerHand();
@@ -140,17 +149,24 @@ const pickUserHand = (hand) => {
    
     if(NumOfScore>=12){
         let cphand=pickComputerHand2();
-        referee2(hand,cphand);
+        setTimeout(() => {
+            referee2(hand,cphand);
+        }, 500);
+        
     } 
     else if (NumOfScore<1){
         document.querySelector(".score h1").innerText = showDefault;
         let cphand=pickComputerHand();
-        referee1(hand,cphand);
+         setTimeout(() => {
+            referee1(hand,cphand);
+        }, 500);
     }
     
     else{
         let cphand=pickComputerHand();
-        referee1(hand,cphand);
+         setTimeout(() => {
+            referee1(hand,cphand);
+        }, 500);
       
     }
   
@@ -164,13 +180,16 @@ const pickUserHand = (hand) => {
 
 
 const pickComputerHand = ()=>{
+    let computerShadow = document.querySelector(".computerShadow");
     let paperStage4 = document.querySelector(".stage4");
     let scissorsStage5 = document.querySelector(".stage5");
     let rockStage6 = document.querySelector(".stage6");
 
     let spockStage7 = document.querySelector(".stage7");
     let lizardStage8 = document.querySelector(".stage8");
-   
+    let decide = document.querySelector(".decide");
+    decide.style.display= "none";
+    //$(".computerShadow").css("display","none");
 
     let hands=["rock", "paper","scissors"]
     let cphands= hands[Math.floor(Math.random()*3)]
@@ -181,17 +200,41 @@ const pickComputerHand = ()=>{
         rockStage6.style.display= "none";
         lizardStage8.style.display= "none";
         spockStage7.style.display= "none";
-
-        paperStage4.style.display= "flex";
+        setTimeout(() => {
+            $(".computerShadow").css("display","none");
+             
+           
+           
+            setTimeout(() => {
+                paperStage4.style.display= "flex";
+                decide.style.display = "flex";
+            }, 200);
+    
+        }, 500);
+        
+        
     }
     else if(cphands=="scissors"){
         paperStage4.style.display= "none";
         rockStage6.style.display= "none";
         lizardStage8.style.display= "none";
         spockStage7.style.display= "none";
-        console.log(cphands)
        
-        scissorsStage5.style.display= "flex";
+       
+        
+        setTimeout(() => {
+            $(".computerShadow").css("display","none");
+            
+            
+               
+           
+            setTimeout(() => {
+                scissorsStage5.style.display= "flex";
+                decide.style.display = "flex";
+            }, 200);
+            
+           
+        }, 500);
     }
     else if(cphands=="rock"){
         scissorsStage5.style.display= "none";
@@ -200,8 +243,20 @@ const pickComputerHand = ()=>{
         spockStage7.style.display= "none";
        
        
-        rockStage6.style.display= "flex";
-        console.log(cphands)
+       
+        setTimeout(() => {
+            $(".computerShadow").css("display","none");
+            
+            setTimeout(() => {
+                rockStage6.style.display= "flex";
+                decide.style.display = "flex";
+            }, 200);  
+           
+           
+            
+        }, 500);
+
+        
     }
     
     return cphands;
@@ -214,6 +269,8 @@ const pickComputerHand2 = ()=>{
     let rockStage6 = document.querySelector(".stage6");
     let spockStage7 = document.querySelector(".stage7");
     let lizardStage8 = document.querySelector(".stage8");
+    let decide = document.querySelector(".decide");
+    decide.style.display= "none";
 
     let hands=["rock", "paper","scissors","spock","lizard"]
     let cphands= hands[Math.floor(Math.random()*5)]
@@ -225,7 +282,15 @@ const pickComputerHand2 = ()=>{
         lizardStage8.style.display= "none";
         spockStage7.style.display= "none";
 
-        paperStage4.style.display= "flex";
+        
+        setTimeout(() => {
+            $(".computerShadow").css("display","none");
+            setTimeout(() => {
+                paperStage4.style.display= "flex";
+                decide.style.display = "flex";
+            }, 200);
+
+        }, 500);
     }
     else if(cphands=="scissors"){
         paperStage4.style.display= "none";
@@ -234,7 +299,14 @@ const pickComputerHand2 = ()=>{
         spockStage7.style.display= "none";
        
        
-        scissorsStage5.style.display= "flex";
+        
+        setTimeout(() => {
+            $(".computerShadow").css("display","none");
+            setTimeout(() => {
+                scissorsStage5.style.display= "flex";
+                decide.style.display = "flex";
+            }, 200);
+        }, 500);
     }
     else if(cphands=="rock"){
         scissorsStage5.style.display= "none";
@@ -242,7 +314,14 @@ const pickComputerHand2 = ()=>{
         lizardStage8.style.display= "none";
         spockStage7.style.display= "none";
        
-        rockStage6.style.display= "flex";
+        
+        setTimeout(() => {
+            $(".computerShadow").css("display","none");
+            setTimeout(() => {
+                rockStage6.style.display= "flex";
+                decide.style.display = "flex";
+            }, 200);
+        }, 500);
         
     }
     else if(cphands=="spock"){
@@ -251,7 +330,14 @@ const pickComputerHand2 = ()=>{
         lizardStage8.style.display= "none";
         rockStage6.style.display= "none";
 
-        spockStage7.style.display= "flex";
+       
+        setTimeout(() => {
+            $(".computerShadow").css("display","none");
+            setTimeout(() => {
+                spockStage7.style.display= "flex";
+                decide.style.display = "flex";
+            }, 200);
+        }, 500);
         
     }
     else if(cphands=="lizard"){
@@ -261,12 +347,20 @@ const pickComputerHand2 = ()=>{
         rockStage6.style.display= "none";
        
        
-        lizardStage8.style.display= "flex";
+       
+        setTimeout(() => {
+            $(".computerShadow").css("display","none");
+            setTimeout(() => {
+                lizardStage8.style.display= "flex";
+            decide.style.display = "flex";
+            }, 200);
+        }, 500);
     }
     
     return cphands;
   
 }
+
 
 const referee1 =(userHand,cphand)=>{
     if(userHand =="paper" && cphand=="scissors"){
@@ -461,6 +555,8 @@ const newGame =()=>{
     let NumOfScore= JSON.parse(localStorage.getItem('score'));
     const stagehands = document.querySelector(".hands");
     const stagebonus = document.querySelector(".bonus");
+    $(".computerShadow").css("display","none");
+    
     const showDefault =NumOfScore;
 
 
@@ -556,6 +652,7 @@ const CloseOnClick =()=>{
 let setDecision =(decision)=>{
    
     
+    const computerShadow =document.querySelector(".computerShadow");
     const redcolor =document.querySelector(".newGame");
         document.querySelector(".decision h1").innerText = decision;
         if(decision=="YOU LOSE!"){
@@ -568,6 +665,7 @@ let setDecision =(decision)=>{
             });
             $(".computer").css({"box-shadow": "0 0 0 40px #293251, 0 0 0 80px #232c4d, 0 0 0 130px #1e2949", "border-radius": "50%", "transition": "opacity 0.4s ease"});
             $(".user").css("box-shadow","none");
+            
             $(".userchoice").css("z-index","1");
             $(".computerchoice").css("z-index","0");
            
@@ -593,7 +691,7 @@ let setDecision =(decision)=>{
             $(".computer").css("box-shadow","none");
             $(".user").css("box-shadow","none");
         }
-        
+       
        
     }
 
@@ -635,7 +733,7 @@ old_data = old_data + 1;
     score=localStorage.setItem('score', JSON.parse(old_data));
 
    
-   NumOfScore = JSON.parseInt(score);
+   
 
 }
 const setScore_neg =(score)=>{
@@ -656,7 +754,7 @@ old_data = old_data - 1;
     score=localStorage.setItem('score', JSON.parse(old_data));
 
    
-   NumOfScore = JSON.parseInt(score);
+   
 
 }
 
