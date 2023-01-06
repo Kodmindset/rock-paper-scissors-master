@@ -73,9 +73,23 @@ margin-top: -58px;
 
 
 }
+.computerShadow{
+ width: 224.63px;
+  height: 224.63px;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  margin: 25%;
+  margin-left: 65%;
+  border-radius: 50%;
+}
 .decide{
   font-size: 3.5rem;
     padding-bottom: 1.5rem;
+    display: none;
 }
 .showRuleImage{
   width: 380px;
@@ -563,7 +577,7 @@ justify-self : center;
 }
 .stage1 .paper_inner_white {
   width: 225px;
-    height: 225px;
+    height: 215px;
     top: 15px;
     left: 0px;
     display: grid;
@@ -626,8 +640,8 @@ justify-self : center;
 }
 .stage2 .scissors_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -689,8 +703,8 @@ justify-self : center;
 }
 .stage3 .rock_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -752,8 +766,8 @@ justify-self : center;
 }
 .stage9 .spock_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -815,8 +829,8 @@ justify-self : center;
 }
 .stage10 .lizard_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -881,8 +895,8 @@ justify-self : center;
 }
 .stage4 .paper_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -944,8 +958,8 @@ justify-self : center;
 }
 .stage5 .scissors_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -1007,8 +1021,8 @@ justify-self : center;
 }
 .stage6 .rock_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -1070,8 +1084,8 @@ justify-self : center;
 }
 .stage7 .spock_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -1133,8 +1147,8 @@ justify-self : center;
 }
 .stage8 .lizard_inner_white {
   width: 225px;
-    height: 225px;
-    top: 15px;
+  height: 215px;
+  top: 15px;
     left: 0px;
     display: grid;
     border-radius: 50%;
@@ -1893,6 +1907,14 @@ margin-left: -225px;
     margin-top: 55px;
     /*margin-bottom: 96px;*/
 }
+.computerShadow{
+  width: 135px;
+    height: 130px;
+    position: absolute;
+    display: none;
+    margin: 55%;
+    margin-top: 42%;
+}
 
 .rules_image{
   
@@ -1927,7 +1949,7 @@ margin-left: -225px;
   height: 196px;
     width: 425px;
     display: none;
-    margin-top: 99px;
+    margin-top: 165px;
     grid-template-columns: repeat(2,1fr);
 }
 .referee {
@@ -1957,6 +1979,11 @@ margin-left: -225px;
   font-size: 56px;
   line-height: 67px;
   margin-bottom: 10px;
+}
+
+.newGame{
+  padding: 6px 40px;
+  font-size: 36px;
 }
 
 /*Paper begins*/
@@ -2539,6 +2566,12 @@ line-height: 40px;
  
     
 }
+.computerShadow{
+  width: 100px;
+  height: 100px;
+  margin: 55%;
+}
+
 .close{
   
   width: 45.09px;
@@ -2563,12 +2596,12 @@ line-height: 40px;
   height: 196px;
     width: 425px;
     display: none;
-    margin-top: 60px;
+    margin-top: 100px;
     grid-template-columns: repeat(2,1fr);
 }
 .referee {
   position: absolute;
-  margin-top: 450px;
+  margin-top: 400px;
   justify-self: center;
   margin-left: 0;
   left: 0;
@@ -2592,7 +2625,11 @@ line-height: 40px;
   font-weight: 700;
   font-size: 56px;
   line-height: 67px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
+}
+.newGame{
+  padding: 6px 40px;
+  font-size: 36px;
 }
 
 /*Paper begins*/
